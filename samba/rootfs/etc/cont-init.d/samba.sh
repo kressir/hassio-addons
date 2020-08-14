@@ -10,6 +10,7 @@ declare name
 declare password
 declare username
 declare veto_files
+declare wins_support
 
 # Check Login data
 if ! bashio::config.has_value 'username' || ! bashio::config.has_value 'password'; then
