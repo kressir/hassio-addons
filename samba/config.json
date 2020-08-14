@@ -30,6 +30,7 @@
     "username": "str",
     "password": "str",
     "interface": "str",
+    "wins_support": "str",
     "allow_hosts": ["str"],
     "veto_files": ["str"],
     "compatibility_mode": "bool"
