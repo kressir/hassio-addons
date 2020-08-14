@@ -35,5 +35,5 @@
     "veto_files": ["str"],
     "compatibility_mode": "bool"
   },
-  "image": "homeassistant/{arch}-addon-samba"
+  "image": "kressir/{arch}-addon-samba"
 }
