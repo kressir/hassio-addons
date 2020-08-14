@@ -16,6 +16,13 @@ if ! bashio::config.has_value 'username' || ! bashio::config.has_value 'password
     bashio::exit.nok "Setting a username and password is required!"
 fi
 
+# WINS Server
+wins_support="no"
+if bashio::config.has_value 'wins_support'; then
+    wins_support=$(bashio::config "wins_support")
+fi
+sed -i "s|%%WINSSUPPORT%%|${wins_support}|g" "${CONF}"
+
 # Workgroup and interface
 sed -i "s|%%WORKGROUP%%|$(bashio::config 'workgroup')|g" "${CONF}"
 sed -i "s|%%INTERFACE%%|$(bashio::config 'interface')|g" "${CONF}"
